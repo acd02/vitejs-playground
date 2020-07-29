@@ -1,0 +1,18 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: min-content;
+  grid-row-gap: 24px;
+  background-color: var(--bg-dark);
+  padding: 1.4rem;
+}
+
+.label {
+  color: var(--color-label);
+  font-weight: 600;
+}
+
+.value {
+  white-space: pre-wrap;
+  color: var(--color-value);
+}
