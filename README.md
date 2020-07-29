@@ -5,3 +5,4 @@
 - Clone the repo
 - install the dependencies `$ npm install`
 - dev mode `$ npm run dev`
+- build `$ npm run build`
