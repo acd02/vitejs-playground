@@ -7,6 +7,7 @@ const reactPlugin = require('vite-plugin-react')
 const config = {
   jsx: 'react',
   plugins: [reactPlugin],
+  port: 1234
 }
 
 module.exports = config

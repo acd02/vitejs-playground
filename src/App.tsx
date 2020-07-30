@@ -4,11 +4,11 @@ import React, { useEffect, useState } from 'react'
 import { Playground } from './components/Playground'
 import { Quokka } from './components/Quokka'
 import styles from './styles/root.module.scss'
-import { getOppositeStatus } from './utils'
+import { getOppositeStatus, Status } from './utils'
 
 function App() {
-  const [status, setStatus] = useState<'playground' | 'quokka'>(
-    (localStorage.getItem('status') as any) || 'playground'
+  const [status, setStatus] = useState<Status>(
+    (localStorage.getItem('status') as Status) || 'playground'
   )
 
   useEffect(() => {
