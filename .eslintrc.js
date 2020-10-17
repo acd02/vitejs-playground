@@ -31,6 +31,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/no-use-before-define': 0,
     '@typescript-eslint/switch-exhaustiveness-check': 2,
+    '@typescript-eslint/no-shadow': 2,
     // fp
     'fp/no-mutation': [
       1,
@@ -54,7 +55,7 @@ module.exports = {
     'newline-before-return': 1,
     'no-console': [1, { allow: ['error'] }],
     'no-debugger': 1,
-    'no-shadow': 2,
+    'no-shadow': 0,
     'no-unused-expressions': [1, { allowShortCircuit: true }],
     'no-var': 2,
     quotes: [1, 'single', { allowTemplateLiterals: false }],
