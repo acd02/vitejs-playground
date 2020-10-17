@@ -1,7 +1,5 @@
 import React from 'react'
 
-import styles from './styles.module.scss'
-
 export type Props = {
   label?: string
   value: Record<string | number, unknown> | string | boolean | number | unknown[]
@@ -16,8 +14,8 @@ export function renderItem(
 
   return (
     <div key={index}>
-      <span className={styles.label}>{label || index}:</span>{' '}
-      <span className={styles.value}>{content}</span>
+      <span className="text-custom-orange font-semibold">{label || index}:</span>{' '}
+      <span className="text-custom-green whitespace-pre-wrap">{content}</span>
     </div>
   )
 }

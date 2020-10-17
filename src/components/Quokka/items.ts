@@ -10,4 +10,7 @@ const users: User[] = [
   { email: 'two', id: 2 },
 ]
 
-export const items: Props[] = [{ label: 'users', value: users }]
+export const items: Props[] = [
+  { label: 'users', value: users },
+  { label: 'ok', value: ['on', 'two'].map(i => i.toUpperCase()) },
+]

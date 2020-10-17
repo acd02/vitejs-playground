@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 
 import { Playground } from './components/Playground'
 import { Quokka } from './components/Quokka'
-import styles from './styles/root.module.scss'
 import { getOppositeStatus, Status } from './utils'
 
 function App() {
@@ -16,9 +15,19 @@ function App() {
   }, [status])
 
   return (
-    <div className={styles.root}>
-      <div className={cx([styles.toggleBlock, status === 'quokka' && styles.isQuokka])}>
-        <button className={styles.button} onClick={() => setStatus(getOppositeStatus)}>
+    <div className="grid app-rows h-full">
+      <div
+        className={cx([
+          'flex flex-none justify-center',
+          status === 'quokka' && 'bg-custom-dark',
+        ])}
+      >
+        <button
+          className={
+            'inline-flex my-4 mx-auto bg-gray-200 py-1 px-2 text-lg focus:outline-none focus:shadow-outline'
+          }
+          onClick={() => setStatus(getOppositeStatus)}
+        >
           show {getOppositeStatus(status)}
         </button>
       </div>

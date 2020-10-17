@@ -1,4 +1,5 @@
-import './styles/index.scss'
+import './css/tailwind.css'
+import './styles/index.css'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
