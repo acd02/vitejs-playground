@@ -4,7 +4,7 @@ import { Playground } from '/@components/Playground'
 
 function App() {
   return (
-    <main className="grid app-rows h-full">
+    <main className="flex flex-col items-start h-full">
       <Playground />
     </main>
   )

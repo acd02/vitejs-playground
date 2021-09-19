@@ -1,15 +1,28 @@
-// @ts-check
-import reactPlugin from 'vite-plugin-react'
-import { resolve } from 'path'
+import reactRefresh from '@vitejs/plugin-react-refresh'
+import { UserConfig, ConfigEnv } from 'vite'
+import { join } from 'path'
+
+const srcRoot = join(__dirname, 'src')
 
 /**
  * @type { import('vite').UserConfig }
  */
-export default {
-  jsx: 'react',
-  plugins: [reactPlugin],
-  port: 1234,
+export default ({ command }: ConfigEnv): UserConfig => ({
+  base: '/',
+  plugins: [reactRefresh()],
   alias: {
-    '/@components/': resolve(__dirname, './src/components')
-  }
-}
+    '/@': srcRoot,
+    '/@components': `${srcRoot}/components`,
+  },
+  build: {
+    outDir: join(srcRoot, '/out'),
+    emptyOutDir: true,
+    rollupOptions: {},
+  },
+  server: {
+    port: process.env.PORT === undefined ? 3004 : +process.env.PORT,
+  },
+  optimizeDeps: {
+    exclude: ['path'],
+  },
+})
